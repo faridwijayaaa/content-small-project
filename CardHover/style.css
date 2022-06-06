@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #009393;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.8);
+
+    display: grid;
+    place-items: center;
+    grid-template-areas: "main";
+
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.card > * {
+    grid-area: main;
+}
+
+.card > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.card > .text {
+    width: 80%;
+    opacity: 0;
+    color: #FFF;
+    font-size: 10px;
+    transition: opacity 400ms, transform 400ms;
+    margin-left: 40px;
+}
+
+.card:is(:hover, :focus) > img {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus) > .text {
+    transform: scale(1.2);
+    opacity: 1;
+}
