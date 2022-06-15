@@ -18,7 +18,7 @@ section {
     height: 300px;
     width: 300px;
     border-radius: 10%;
-    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 
     display: grid;
     place-items: center;
